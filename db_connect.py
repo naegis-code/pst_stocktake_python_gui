@@ -19,3 +19,12 @@ def configure_connection(user, pwd):
 
 # เริ่มค่า engine เป็น None จนกว่าจะกำหนดที่ login.py
 engine = None
+
+user_test = 'prthanapat'
+pwd_test = '20020015'
+host_test = '103.22.182.82'
+port_test = '5432'
+database_db3 = 'pstdb3'
+database_db = 'pstdb'
+engine_test_db = create_engine(f"postgresql://{user_test}:{pwd_test}@{host_test}:{port_test}/{database_db}")
+engine_test_db3 = create_engine(f"postgresql://{user_test}:{pwd_test}@{host_test}:{port_test}/{database_db3}")
