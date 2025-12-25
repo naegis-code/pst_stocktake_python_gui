@@ -31,7 +31,7 @@ class B2SProgram(tk.Tk):
         refresh_button.pack(pady=10)
 
         # ปุ่ม Exit Program
-        exit_button = tk.Button(self, text="Exit Program", font=("Arial", 14), bg='#d9534f', fg='white',
+        exit_button = tk.Button(self, text="Exit Program", font=("Arial", 14), bg="#c99290", fg='white',
                                  command=self.destroy)
         exit_button.pack(pady=10)
 
