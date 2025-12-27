@@ -1,0 +1,39 @@
+สร้าง / เปิดใช้ Virtual Environment
+    python -m venv venv
+    venv\Scripts\activate
+
+install libary
+    pip install django psycopg2-binary
+    python.exe -m pip install --upgrade pip
+
+สร้าง Project
+    django-admin startproject pst_stocktake
+    cd pst_stocktake
+
+แก้ไข settings.py เพื่อใช้ PostgreSQL
+    เปิดไฟล์ myproject/settings.py
+    แก้ไขบรรทัดฐานข้อมูลส่วนนี้:
+    Python
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'your_dbname',
+            'USER': 'your_dbuser',
+            'PASSWORD': 'your_dbpassword',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
+    }
+    NAME: ชื่อ database
+    USER: username ที่ใช้ login
+    PASSWORD: รหัสผ่าน
+    HOST: ที่อยู่ของ database (ถ้า local ใช้ localhost)
+
+รัน migration เพื่อสร้าง table พื้นฐาน
+python manage.py migrate
+
+ต้อง createsuperuser ก่อน
+python manage.py createsuperuser
+
+Runserver django
+python manage.py runserver
